@@ -2,6 +2,10 @@
 
 Congratulator - a basic Angular 2 project.
 
+# Usage
+
+npm install
+npm start
 
 # APM
 
