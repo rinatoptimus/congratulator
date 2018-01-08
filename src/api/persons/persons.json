@@ -1,0 +1,42 @@
+[
+    {
+        "personImageUrl": "http://i.pravatar.cc/400?img=60",
+        "personId": 1,
+        "personName": "Иван Иванов",
+        "personCity": "Самара",
+        "personBirthDate": "23/04",
+        "personProfession": "Бухгалтер"
+    },
+    {
+        "personImageUrl": "http://i.pravatar.cc/400?img=47",
+        "personId": 2,
+        "personName": "Жанна Жаннова",
+        "personCity": "Уфа",
+        "personBirthDate": "04/12",
+        "personProfession": "Логист"
+    },
+    {
+        "personImageUrl": "http://i.pravatar.cc/400?img=58",
+        "personId": 5,
+        "personName": "Александр Александров",
+        "personCity": "Самара",
+        "personBirthDate": "25/10",
+        "personProfession": "Менеджер по работе с клиентами"
+    },
+    {
+        "personImageUrl": "http://i.pravatar.cc/400?img=17",
+        "personId": 8,
+        "personName": "Сергей Сергеев",
+        "personCity": "Москва",
+        "personBirthDate": "16/08",
+        "personProfession": "Менеджер по продажам"
+    },
+    {
+        "personImageUrl": "http://i.pravatar.cc/400?img=24",
+        "personId": 10,
+        "personName": "Светлана Светланова",
+        "personCity": "Москва",
+        "personBirthDate": "10/09",
+        "personProfession": "Товаровед"
+    }
+]

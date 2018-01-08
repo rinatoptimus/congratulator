@@ -1,0 +1,69 @@
+<div class='panel panel-primary' *ngIf='person'>
+    <div class='panel-heading'>
+        {{pageTitle + ': ' + person.personName}}
+    </div>
+
+    <div class='panel-body'>
+        <div class='row'>
+            <div class='col-md-8'>
+                <div class='row'>
+                    <div class='col-md-4'>Имя и фамилия:</div>
+                    <div class='col-md-4'>
+                        <inline-editor class="inline-editor--hover" type="text" [(ngModel)]="person.personName" (onSave)="saveEditable($event)" name="editableText1" size="8"></inline-editor>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-4'>Город:</div>
+                    <div class='col-md-4'>{{person.personCity}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-4'>Должность:</div>
+                    <div class='col-md-4'>{{person.personProfession}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-4'>Дата рождения (ДД/ММ):</div>
+                    <div class='col-md-4'>{{person.personBirthDate}}</div>
+                </div>
+            </div>
+
+            <div class='col-md-4'>
+                <img class='center-block img-responsive' 
+                     [style.width.px]='200' 
+                     [style.margin.px]='2' 
+                     [src]='person.personImageUrl'
+                     [title]='person.personName'>
+            </div>
+        </div>
+    </div>
+
+    <div class='panel-footer'>
+        <a class='btn btn-default' (click)='onBack()' style='width:80px'>
+            <i class='glyphicon glyphicon-chevron-left'></i> Назад
+        </a>
+    </div>
+
+    <h3>Поздравления от коллег</h3>
+    <ul>
+        <li *ngFor="let congrat of congrats; let i=index">
+            <span [ngClass]="{'checked': congrat.completed}" [innerHTML]="congrat.newCongrat">{{ congrat.newCongrat }}</span>
+            <button class="btn btn-danger" (click)="removeCongrat(i)">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+        </li>
+    </ul>
+    <ckeditor
+        [(ngModel)]="newCongrat"
+        [config]="{uiColor: '#99000'}"
+        [readonly]="false"
+        debounce="500">
+    </ckeditor>
+
+    <div>
+        <form (submit)="addCongratulation($event)">
+        <button class="btn btn-info"  type="submit" [disabled]="newCongrat===''">Оставить поздравление</button>
+        </form>
+    </div>
+
+
+
+</div>
